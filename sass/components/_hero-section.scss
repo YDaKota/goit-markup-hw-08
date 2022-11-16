@@ -2,11 +2,10 @@
     background-color: $background-footer;
     text-align: center;
     padding: 200px 0;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-img.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+    url(../images/background-img.jpg);
     max-width: 1600px;
     margin: 0 auto;
-
-    
 
     &__button {
         display: inline-block;
@@ -36,6 +35,17 @@
         &__button {
             padding: 10px 24px;
         }
+
+        .hero {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+            url(../../images/mobile1x.jpg);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+                url(../../images/mobile2x.jpg);
+            }
+        }
     }
 
     @media screen and (min-width: 768px) {
@@ -45,17 +55,15 @@
 
         }
         .hero {
-            background-image: url('../../images/tablet1x.jpg');
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+            url(../../images/tablet1x.jpg);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+                url(../../images/tablet2x.jpg);
+            }
         }
-        
-        /*
-        (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        .hero {
-            background-image: url('../../images/tablet2x.jpg');
-        }
-        }}*/
     }
 
     @media screen and (min-width: 1200px) {
@@ -69,6 +77,19 @@
             width: 696px;
             margin: 0 auto;
         }
+
+        .hero {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+            url(../../images/background-img.jpg);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+                url(../../images/background-img2x.jpg);
+            }
+        }
+
+
     }
 }
 

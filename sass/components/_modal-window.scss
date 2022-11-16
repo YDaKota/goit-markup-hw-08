@@ -21,8 +21,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-height: 581px;
-    min-width: 528px;
+    width: 100%;
     background-color: $primary-background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -71,13 +70,20 @@
 
     @media screen and (min-width: 480px) {
         .modal {
-            min-width: 450px;
+            width: 450px;
+            height: 609px;
         }
+    }
 
-        &__button {
-
+    @media screen and (min-width: 1200px) {
+        .modal {
+            height: 581px;
+            width: 528px;
         }
-    };
+    }
+
+
+    
 }
 
 .modal__close-btn {
@@ -92,6 +98,7 @@
 
 .modal__form {
     padding: 40px;
+    width: 100%;
 
     &-header {
         font-weight: 700;
@@ -133,7 +140,8 @@
 
     @media screen and (min-width: 480px) {
         .modal__form {
-            width: 370px;
+            /*width: 370px;*/
+            width: 80%;
         }
         
     };
@@ -187,7 +195,7 @@
     &:hover ~ .modal__form-image,
     &:active ~ .modal__form-image,
     &:focus ~ .modal__form-image {
-    fill: $accent-color;
+        fill: $accent-color;
     }
 
     &-name {
@@ -199,7 +207,21 @@
         margin-bottom: 4px;
     }
 
-    
+    @media screen and (min-width: 480px) {
+        .modal__form-input {
+            /*width: 370px;*/
+            width: 90%;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 448px;
+    }
+
 }
 
 .checkbox {
@@ -228,6 +250,17 @@
         text-decoration-line: underline;
         color: $accent-color;
     }
+
+    @media screen and (min-width: 480px) {
+        &__accept {
+            font-size: 12px;
+        }
+
+        &__link {
+            font-size: 12px;
+        }
+    }
+
 }
 
 

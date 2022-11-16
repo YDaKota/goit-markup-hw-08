@@ -279,24 +279,27 @@ img {
   .hero__button {
     padding: 10px 24px;
   }
+  .hero .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile1x.jpg);
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile2x.jpg);
+  }
 }
 @media screen and (min-width: 768px) {
-  .hero {
-    /*
-    (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .hero {
-        background-image: url('../../images/tablet2x.jpg');
-    }
-    }}*/
-  }
   .hero__title {
     width: 360px;
     padding: 0;
   }
   .hero .hero {
-    background-image: url("../../images/tablet1x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/tablet1x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/tablet2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -309,6 +312,14 @@ img {
     color: #FFFFFF;
     width: 696px;
     margin: 0 auto;
+  }
+  .hero .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img2x.jpg);
   }
 }
 
@@ -1036,8 +1047,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-height: 581px;
-  min-width: 528px;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1083,7 +1093,14 @@ img {
 }
 @media screen and (min-width: 480px) {
   .modal .modal {
-    min-width: 450px;
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal .modal {
+    height: 581px;
+    width: 528px;
   }
 }
 
@@ -1097,6 +1114,7 @@ img {
 
 .modal__form {
   padding: 40px;
+  width: 100%;
 }
 .modal__form-header {
   font-weight: 700;
@@ -1133,7 +1151,8 @@ img {
 }
 @media screen and (min-width: 480px) {
   .modal__form .modal__form {
-    width: 370px;
+    /*width: 370px;*/
+    width: 80%;
   }
 }
 
@@ -1184,6 +1203,17 @@ img {
   margin-top: 10px;
   margin-bottom: 4px;
 }
+@media screen and (min-width: 480px) {
+  .modal__form-input .modal__form-input {
+    /*width: 370px;*/
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__form-input {
+    width: 448px;
+  }
+}
 
 .checkbox:checked + .checkbox__icon {
   border-color: #2196F3;
@@ -1206,6 +1236,14 @@ img {
 .checkbox__link {
   text-decoration-line: underline;
   color: #2196F3;
+}
+@media screen and (min-width: 480px) {
+  .checkbox__accept {
+    font-size: 12px;
+  }
+  .checkbox__link {
+    font-size: 12px;
+  }
 }
 
 .menu-toggle {
