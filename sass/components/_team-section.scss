@@ -1,0 +1,130 @@
+.team {
+    background-color: $secondary-background-color;
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__card {
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__card:hover {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &__info {
+        padding: 30px 0;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    &__job-title {
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        color: $secondary-text-color;
+        margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 480px) {
+        &__cards {
+            display: block;
+        }
+
+        &__card {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            width: calc((100% - 1 * 30px) / 2);
+    
+            &:not(:nth-last-child(-n + 2)) {
+                margin-bottom: 30px;
+            }
+    
+            &:not(:nth-child(2n)) {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        &__cards {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        &__card {
+            &:nth-child(2n) {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.social__links {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    & > li{
+        margin-right: 10px;
+    }
+    
+    & > li:last-child{
+        margin-right: 0px;
+    }
+
+    .link:hover,
+    .link:focus {
+        background-color: $accent-color;
+    }
+}
+
+.social__link-icon {
+    display: inline-block;
+    fill: #AFB1B8;
+    width: 20px;
+    height: 20px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    & > .social__link-icon,
+    & > .social__link-icon {
+    fill: $primary-background-color;
+    }
+}
+
+
+

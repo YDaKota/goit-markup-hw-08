@@ -1,0 +1,156 @@
+.benefits {
+    padding: 0;
+    margin: 0;
+
+    &__background {
+        width: 100%;
+        height: 120px;
+        background-color: $secondary-background-color;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__sprite {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__subheader {
+        text-align: left;
+        font-size: inherit;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    
+    &__description {
+        color: $secondary-text-color;
+        line-height: 1.71;
+    }
+
+    @media screen and (min-width: 480px) {
+        &__flex {
+            display: block;
+            margin: 0;
+            padding-top: 60px;
+        }
+
+        &__subheader {
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        &__thesis {
+            width: 100%;
+            margin-bottom: 30px;
+            margin: 0 auto;
+        }
+
+        &__description {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__flex {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 60px;
+        }
+
+        &__thesis {
+            width: calc((100% - 1 * 30px) / 2);
+        
+            &:not(:nth-last-child(-n + 2)) {
+                margin-bottom: 30px;
+            }
+        
+            &:not(:nth-child(2n)) {
+                margin-right: 30px;
+            }
+        }
+
+        &__subheader {
+            text-align: start;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__flex {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 60px;
+            padding-bottom: 0;
+            flex-wrap: nowrap;
+        }
+
+        &__thesis {
+            width: 100%;
+            margin-bottom: 0;
+            &:nth-child(2n) {
+                margin-right: 30px;
+            }
+        }
+
+        &__description {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.about-us {
+    @media screen and (min-width: 480px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
+}
+
+.pictures {
+    display: flex;
+    justify-content: space-between;
+
+    .item:not(:last-child) {
+        margin-right: 30px;
+    }
+    
+    &__group {
+        position: relative;
+    }
+    
+    &__gadget {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        
+    }
+    
+    &__descr {
+        position: absolute;
+        bottom: 0;
+        font-weight: 700;
+        font-size: inherit;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: rgba(47, 48, 58, 0.8);
+        height: 70px;
+        width: 370px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
