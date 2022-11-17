@@ -38,6 +38,16 @@
         margin-bottom: 16px;
     }
 
+    @media screen and (max-width: 480px) {
+        &__cards {
+            display: block;
+        }
+
+        &__card {
+            margin-bottom: 30px;
+        }
+    }
+
     @media screen and (min-width: 480px) {
         &__cards {
             display: block;

@@ -6,9 +6,12 @@
     flex-wrap: wrap;
         
     &__image {
-        display: block;
+        /*display: block;*/
         margin: 0;
-    }
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        }
 
     &__link {
         display: flex;

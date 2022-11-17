@@ -20,19 +20,32 @@
         background-color: $accent-color;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
-        font-weight: 700;
+        /*font-weight: 700;*/
         font-size: 16px;
-        line-height: 1.87;
+        line-height: 1.8;
         text-align: center;
         color: #FFFFFF;
         cursor: pointer;
         letter-spacing: 0.06em;
-        padding: 10px 32px;
+        padding: 10px 24px;
         margin-top: 40px;
         border: none;
+        /*width: 100%;*/
+    }
+
+    &__title {
+        width: 100%;
+        font-size: 26px;
+        line-height: 1.62;
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #FFFFFF;
     }
 
     @media screen and (min-width: 480px) {
+        /*
         &__title {
             width: 100%;
             font-size: 26px;
@@ -43,10 +56,11 @@
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: #FFFFFF;
-        }
+        }*/
 
         &__button {
             padding: 10px 24px;
+            width: 200px;
         }
     }
 
@@ -72,12 +86,8 @@
 
     @media screen and (min-width: 1200px) {
         &__title {
-            font-weight: 900;
             font-size: 44px;
             line-height: 1.36;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #FFFFFF;
             width: 696px;
             margin: 0 auto;
         }

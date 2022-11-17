@@ -1,26 +1,42 @@
 .footer {
     background-color: $background-footer;
-    padding: 60px 0;
+    padding: 60px 15px;
+
+    @media screen and (min-width: 768px) {
+        padding: 60px 0;
+    }
+
 
     &__logo {
         color: $primary-background-color;
     }
     
+    &__flex {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
     &__contacts {
         margin-top: 20px;
     }
 
     &__contacts-block {
-        margin-right: 70px;
+        margin-right: 0;
+        /*margin-right: 70px;*/
     }
 
     &__form {
+        display: block;
+        /*
         display: flex;
-        margin-top: 20px;
+        margin-top: 20px;*/
     }
 
     &__join-block {
-        margin-right: 93px;
+        text-align: center;
+        margin: 60px 0 30px 0;
+        /*margin-right: 93px;*/
     }
     
     &__join-block-title {
@@ -28,7 +44,7 @@
         line-height: 1.14;
         text-transform: uppercase;
         letter-spacing: inherit;
-        text-align: left;
+        text-align: center;
         color: $primary-background-color;
         margin-bottom: 0px;
     }
@@ -67,6 +83,11 @@
             display: flex;   
             align-items: baseline; 
             justify-content: space-around;
+        }
+
+        &__flex {
+            margin: 0 auto;
+            padding: 0;
         }
     }
 
@@ -150,7 +171,6 @@
 
 .footer__input {
     box-sizing: border-box;
-    width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -159,6 +179,9 @@
     margin-right: 12px;
     padding: 15px;
     color: $primary-background-color;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
 
     &:active, 
     &:focus {
@@ -167,16 +190,17 @@
     }
 
     @media screen and (min-width: 480px) {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 450px;
     }
 
     @media screen and (min-width: 768px) {
         width: 450px;
+        margin-top: 20px;
     }
 
     @media screen and (min-width: 1200px) {
         width: 358px;
+        margin-top: 0;
     }
 }
 
@@ -191,9 +215,14 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
-    min-width: 200px;
+    width: 100%;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    @media screen and (min-width: 480px) {
+        width: 200px;
+    }
+
 
     &-icon {
         margin-left: 10px;
@@ -205,6 +234,7 @@
         .footer__btn {
             display: block;
             margin: 0 auto;
+            width: 200px;
         }
 
         &-wrap {
