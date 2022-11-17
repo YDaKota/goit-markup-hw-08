@@ -23,10 +23,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     min-height: 581px;
-    min-width: 528px;
+    width: 450px;
     background-color: $primary-background-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+    }
+    
 
     &__button {
         position: absolute;
@@ -135,13 +140,6 @@
         outline: none;
         margin-top: 4px;
     }
-
-    @media screen and (min-width: 480px) {
-        .modal__form {
-            /*width: 370px;*/
-        }
-        
-    }
 }
 
 .modal__form-label {
@@ -175,7 +173,7 @@
 }
 
 .modal__form-input {
-    width: 448px;
+    width: 370px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -203,17 +201,6 @@
         margin-top: 10px;
         margin-bottom: 4px;
         display: block;
-    }
-
-    @media screen and (min-width: 480px) {
-        .modal__form-input {
-            /*width: 370px;*/
-            
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        
     }
 
     @media screen and (min-width: 1200px) {
@@ -255,6 +242,16 @@
 
         &__link {
             font-size: 12px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__accept {
+            font-size: 14px;
+        }
+
+        &__link {
+            font-size: 14px;
         }
     }
 

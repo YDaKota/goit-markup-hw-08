@@ -87,6 +87,7 @@ img {
 
 .header {
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 .header__menu {
   display: flex;
@@ -266,7 +267,7 @@ img {
   background-color: #2F303A;
   text-align: center;
   padding: 200px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile1x.jpg");
   max-width: 1600px;
   margin: 0 auto;
   background-repeat: no-repeat;
@@ -274,7 +275,7 @@ img {
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile2x.jpg");
   }
 }
 .hero__button {
@@ -305,20 +306,6 @@ img {
   color: #FFFFFF;
 }
 @media screen and (min-width: 480px) {
-  .hero {
-    /*
-    &__title {
-        width: 100%;
-        font-size: 26px;
-        line-height: 1.62;
-        padding: 0 60px;
-        font-weight: 900;
-        text-align: center;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    }*/
-  }
   .hero__button {
     padding: 10px 24px;
     width: 200px;
@@ -332,12 +319,12 @@ img {
     margin: 0 auto;
   }
   .hero .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/tablet1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet1x.jpg");
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/tablet2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -348,12 +335,12 @@ img {
     margin: 0 auto;
   }
   .hero .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background-img.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/background-img2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background-img2x.jpg");
   }
 }
 
@@ -1027,10 +1014,15 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   min-height: 581px;
-  min-width: 528px;
+  width: 450px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 .modal__button {
   position: absolute;
@@ -1128,11 +1120,6 @@ img {
   outline: none;
   margin-top: 4px;
 }
-@media screen and (min-width: 480px) {
-  .modal__form .modal__form {
-    /*width: 370px;*/
-  }
-}
 
 .modal__form-label {
   line-height: 1.14;
@@ -1159,7 +1146,7 @@ img {
 }
 
 .modal__form-input {
-  width: 448px;
+  width: 370px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1181,11 +1168,6 @@ img {
   margin-top: 10px;
   margin-bottom: 4px;
   display: block;
-}
-@media screen and (min-width: 480px) {
-  .modal__form-input .modal__form-input {
-    /*width: 370px;*/
-  }
 }
 @media screen and (min-width: 1200px) {
   .modal__form-input {
@@ -1223,6 +1205,14 @@ img {
     font-size: 12px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .checkbox__accept {
+    font-size: 14px;
+  }
+  .checkbox__link {
+    font-size: 14px;
+  }
+}
 
 .menu-toggle {
   display: inline-flex;
@@ -1242,4 +1232,17 @@ img {
   .menu-toggle {
     display: none;
   }
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  /*top: 0;*/
+  left: 0;
+  width: 100%;
+  background-color: turquoise;
+}
+.menu-container.is-open {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

@@ -18,7 +18,6 @@
     <header class="header">
       <div class="container header__menu">
         <a href="./index.html" class="logo" lang="en"><span class="logo--accent">Web</span> Studio</a>
-
         <!---
         <div class="menu-container" id="menu-container" data-menu>-->
         <nav>
@@ -52,14 +51,61 @@
           </li>
         </ul>
 
-        <button type="button" class="menu-toggle" 
-          aria-label="переключатель мобильного меню" 
-          aria-expanded="false" data-menu-button>
-            <svg width="40" height="40">
-              <use class="icon-cross" href="./images/icons.svg#icon-close-burger-menu" js-close-menu></use>
-              <use class="icon-menu" href="./images/icons.svg#icon-burger-menu" js-open-menu></use>
+        <!-- Mobile menu --> 
+
+        <button type="button" class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button>
+            <svg width="40" height="40" aria-label="переключатель мобильного меню">
+              <use class="icon-cross" 
+              href="./images/icons.svg#icon-close-burger-menu"></use>
+              <use class="icon-menu" 
+              href="./images/icons.svg#icon-burger-menu"></use>
             </svg>
         </button>
+
+        <div class="menu-container is-open" id="menu-container" data-menu>
+          content menu
+          <button type="button" class="mobile-close" 
+            data-menu-close aria-expanded="false" aria-controls="mobile__content">
+            <svg class="mobile-icons" width="40" height="40">
+              <use class="mobile-icons__icon-close" href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mobile__nav">
+            <ul class="mobile__list">
+              <li class="mobile__item">
+                <a class="mobile__link mobile__link--current" href="">Студія</a>
+              </li>
+              <li class="mobile__item">
+                <a class="mobile__link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="mobile__item">
+                <a class="mobile__link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+
+          <ul class="mobile-contact__list">
+            <li class="mobile-contact__item" aria-label="Phone">
+              <a class="mobile-contact__link  mobile-contact__link--current" href="tel:+380961111111">
+                +380961111111</a>
+            </li>
+            <li class="mobile-contact__item" aria-label="Mail">
+              <a class="mobile-contact__link" href="mailto:info@devstudio.com">
+                info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mobile-social">
+            <li class="mobile-social__list"><a class="mobile-social__link" href="">Instagram</a></li>
+            <li class="mobile-social__list"><a class="mobile-social__link" href="">Twitter</a></li>
+            <li class="mobile-social__list"><a class="mobile-social__link" href="">Facebook</a></li>
+            <li class="mobile-social__list"><a class="mobile-social__link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
+
       </div>
     </header>
 
