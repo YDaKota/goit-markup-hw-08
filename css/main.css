@@ -7,6 +7,7 @@ body {
 }
 
 a {
+  color: #212121;
   text-decoration: none;
   margin: 0px;
 }
@@ -94,6 +95,11 @@ img {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+}
+@media screen and (max-width: 768px) {
+  .header__menu {
+    margin: 0 15px;
+  }
 }
 
 .header__nav {
@@ -1234,15 +1240,91 @@ img {
   }
 }
 
+.mobile-close {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+}
+
 .menu-container {
-  display: none;
   position: absolute;
   top: 100%;
   /*top: 0;*/
   left: 0;
   width: 100%;
-  background-color: turquoise;
+  height: auto;
+  background-color: #fff;
+  padding: 48px 40px;
+}
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+  }
 }
 .menu-container.is-open {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobi__nav {
+  margin-bottom: 300px;
+}
+.mobi__nav-item {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+.mobi__nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobi__nav-item:hover, .mobi__nav-item:hover {
+  color: #2196F3;
+}
+.mobi__nav-link.current {
+  color: #2196F3;
+}
+
+.mobi-contacts__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+.mobi-contacts__link:hover, .mobi-contacts__link:focus {
+  font-size: 34px;
+  color: #2196F3;
+}
+.mobi-contacts__link.current {
+  color: #2196F3;
+}
+.mobi-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobi-social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+.mobi-social__list:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+.mobi-social__list:not(:first-child) {
+  padding-left: 10px;
+}
+.mobi-social__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
 }/*# sourceMappingURL=main.css.map */
