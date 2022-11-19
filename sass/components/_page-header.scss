@@ -6,10 +6,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 80px;
-
-        @media screen and (max-width: 768px) {
-            margin: 0 15px;
+        height: 60px;
+        padding: 0 15px;
+        @media screen and (min-width: 768px) {
+            height: 80px;
         }
     }
 }
@@ -23,6 +23,10 @@
 
     @media screen and (min-width: 768px) {
         display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
     }
 
     &-item {
@@ -173,22 +177,24 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    color: #000;
+    color: $accent-color;
 
     &--accent {
-        color: $accent-color;
+        color: #000;
     }
 
     @media screen and (min-width: 480px) {
         .logo {
             font-size: 24px;
-            text-align: center;
+            margin: 0;
+            padding: 0;
         }
     }
 
     @media screen and (min-width: 768px) {
         .logo {
             text-align: start;
+            
         }
 
         &--accent {
