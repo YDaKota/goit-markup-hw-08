@@ -309,6 +309,7 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #FFFFFF;
+  padding: 5px;
 }
 @media screen and (min-width: 480px) {
   .hero__button {
