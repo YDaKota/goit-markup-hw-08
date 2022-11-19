@@ -281,7 +281,7 @@ img {
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile2x.jpg");
   }
 }
 .hero__button {
@@ -1220,6 +1220,41 @@ img {
   }
 }
 
+/*
+.menu-open {
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+}
+
+.mob-menu {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    top: 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    > .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: auto;
+    }
+}
+
+.menu-close {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+}
+*/
 .menu-toggle {
   display: inline-flex;
   border: none;
@@ -1252,8 +1287,8 @@ img {
 
 .menu-container {
   position: absolute;
-  top: 100%;
-  /*top: 0;*/
+  /*top: 100%;*/
+  top: 0;
   left: 0;
   width: 100%;
   height: auto;
