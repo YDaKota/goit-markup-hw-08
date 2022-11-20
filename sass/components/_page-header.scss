@@ -15,18 +15,20 @@
 }
 
 .header__nav {
-    display: none;
-
-    @media screen and (min-width: 480px) {
-        display: none;
-    }
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-    }
-
     @media screen and (min-width: 1200px) {
         margin-left: 93px;
+    }
+
+    &-list {
+        display: none;
+
+        @media screen and (min-width: 480px) {
+            display: none;
+        }
+    
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
     }
 
     &-item {
@@ -136,7 +138,7 @@
     @media screen and (min-width: 1200px) {
         display: flex;
         align-items: center;
-        /*margin-left: auto;*/
+        margin-left: auto;
         flex-wrap: nowrap;
 
         &-item {
